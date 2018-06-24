@@ -15,6 +15,6 @@ export class BmiPage {
   constructor(private BmiProvider: BmiProvider) { }
 
 calculateBmi() {
-this.bmi = this.bmiProvider.calculateBmi(this.height, this.weight);
+this.bmi = this.BmiProvider.calculateBmi(this.height, this.weight);
 }
 }
