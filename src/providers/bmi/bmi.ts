@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
+import { BMI } from '../../models/bmi.model';
 
 @Injectable()
 export class BmiProvider {
 
   calculateBmi (height: number, weight: number) {
-    return weight / height / height;
-  }
+    const BMI =  weight / height / height;
+  
+  return <BMI> {
+BMI, 
+classification: this.classifyBmi(BMI),
+};
+}
 
-  classifyBmi (BMI: number) {
+  private classifyBmi (BMI: number) {
     if (BMI < 18.5) {
-      return 'Underweight'
+      return 'Underweight';
     } else if (BMI > 18.5 && BMI < 24.9) {
       return 'Normal Weight';
     } else if (BMI > 25 && BMI < 29.9) {
@@ -19,7 +25,7 @@ export class BmiProvider {
     } else if (BMI > 35 && BMI < 39.9) {
       return 'Class 2 Obesity' ;
     } else if (BMI > 40) {
-      return 'Class 3 Obestity';
+      return 'Class 3 Obesity';
     }
   }
     }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, } from 'ionic-angular';
 import {BmiProvider} from '../../providers/bmi/bmi'
+import { BMI } from '../../models/bmi.model';
 
 @IonicPage()
 @Component({
@@ -10,7 +11,7 @@ import {BmiProvider} from '../../providers/bmi/bmi'
 export class BmiPage {
   height: number;
   weight: number;
-  bmi: number;
+  bmi: BMI;
 
   constructor(private BmiProvider: BmiProvider) { }
 
