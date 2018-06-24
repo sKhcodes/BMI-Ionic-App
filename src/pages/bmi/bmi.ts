@@ -12,9 +12,9 @@ export class BmiPage {
   weight: number;
   bmi: number;
 
-  constructor(private bmiProvider: BmiProvider) { }
+  constructor(private BmiProvider: BmiProvider) { }
 
 calculateBmi() {
-this.bmi = this.bmiProvider.calculateBMI(this.height, this.weight);
+this.bmi = this.bmiProvider.calculateBmi(this.height, this.weight);
 }
 }
