@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { BmiProvider } from '../providers/bmi/bmi';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +23,6 @@ import { BmiProvider } from '../providers/bmi/bmi';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BmiProvider
   ]
 })
 export class AppModule {}
