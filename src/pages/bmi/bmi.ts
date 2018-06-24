@@ -11,11 +11,11 @@ import { BMI } from '../../models/bmi.model';
 export class BmiPage {
   height: number;
   weight: number;
-  bmi: BMI;
+  BMI: BMI;
 
   constructor(private BmiProvider: BmiProvider) { }
 
 calculateBmi() {
-this.bmi = this.BmiProvider.calculateBmi(this.height, this.weight);
+this.BMI = this.BmiProvider.calculateBmi(this.height, this.weight);
 }
 }

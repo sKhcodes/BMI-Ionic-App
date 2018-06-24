@@ -8,7 +8,7 @@ export class BmiProvider {
     const BMI =  weight / height / height;
   
   return <BMI> {
-BMI, 
+BMI: BMI.toFixed(2),
 classification: this.classifyBmi(BMI),
 };
 }

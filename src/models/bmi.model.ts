@@ -1,4 +1,4 @@
 export interface BMI {
-    BMI: number,
+    BMI: string;
     classification: string;
 }
